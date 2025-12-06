@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kusina Filipino</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffe3cf;
+    }
+    .header {
+        background-image: url('https://i.ibb.co/nrx8G9C/food-bg.jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 260px;
+        position: relative;
+        text-align: center;
+        padding-top: 20px;
+        color: black;
+    }
+    .header h1 {
+        font-size: 60px;
+        margin: 0;
+        font-weight: 700;
+    }
+    .header h2 {
+        font-size: 28px;
+        margin-top: -10px;
+    }
+    .search-bar {
+        width: 60%;
+        max-width: 500px;
+        margin: 20px auto 0;
+        display: flex;
+        background: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .search-bar input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+    .search-bar button {
+        width: 50px;
+        border: none;
+        background: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .section-title {
+        background: #ff8b3d;
+        padding: 15px 20px;
+        font-size: 24px;
+        font-weight:700;
+    }
+    .content {
+        padding: 20px;
+    }
+    .recipe-card {
+        background: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 30px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .recipe-card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    .recipe-text {
+        max-width: 400px;
+    }
+    .recipe-text h3 {
+        margin: 0 0 5px;
+        font-size: 22px;
+    }
+    .recipe-text p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    .star {
+        font-size: 120px;
+        color: #ffa24c;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .footer {
+        background: #ffdb3b;
+        padding: 25px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 30px;
+    }
+    @media (max-width: 768px) {
+        .recipe-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .recipe-text {
+            max-width: 100%;
+        }
+        .search-bar {
+            width: 85%;
+        }
+        .header h1 {
+            font-size: 45px;
+        }
+        .header h2 {
+            font-size: 22px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>Kusina</h1>
+    <h2>Filipina</h2>
+    <div class="search-bar">
+        <input type="text" placeholder="Search recipes..." />
+        <button>🔍</button>
+    </div>
+</div>
+<div class="section-title">Classic Pinoy Favourites</div>
+<div class="content">
+    <div class="recipe-card">
+        <img src="https://i.ibb.co/6twbbG8/sinigang.jpg" alt="Sinigang" />
+        <div class="recipe-text">
+            <h3>Sinigang</h3>
+            <p>A flavorful and tangy Filipino soup known for its sour broth, typically made with tamarind, tomatoes, and other souring agents.</p>
+        </div>
+    </div>
+    <div class="star">★</div>
+    <div class="recipe-card">
+        <div class="recipe-text">
+            <h3>Menudo</h3>
+            <p>A rich and savory Filipino stew made with diced pork, liver, potatoes, carrots, and bell peppers in a tomato-based sauce. It often includes raisins and hotdogs for added flavor and sweetness.</p>
+        </div>
+        <img src="https://i.ibb.co/Nx5X6Bs/menudo.jpg" alt="Menudo" />
+    </div>
+    <div class="star">★</div>
+    <div class="recipe-card">
+        <img src="https://i.ibb.co/4jmcML7/adobo.jpg" alt="Adobo" />
+        <div class="recipe-text">
+            <h3>Adobo</h3>
+            <p>Considered the national dish of the Philippines, Adobo is a savory dish made by braising meat in a sauce of vinegar and soy sauce. It is flavorful, tangy, and slightly salty.</p>
+        </div>
+    </div>
+    <div class="star">★</div>
+    <div class="recipe-card">
+        <div class="recipe-text">
+            <h3>Sisig</h3>
+            <p>A popular Filipino dish made from chopped pork. It's often served sizzling on a hot plate, delivering a savory, spicy, and tangy flavor.</p>
+        </div>
+        <img src="https://i.ibb.co/4TPC1f3/sisig.jpg" alt="Sisig" />
+    </div>
+</div>
+<div class="footer">
+    Mga Panlasang Pinoy Recipes
+</div>
+</body>
+</html>
