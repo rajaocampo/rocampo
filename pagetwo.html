@@ -1,173 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kusina Filipino</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusina Filipina</title>
+
 <style>
-    body {
+   
+    * {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: #ffe3cf;
+        padding: 0;
+        box-sizing: border-box;
     }
-    .header {
-        background-image: url('httpsjpg'); 
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.4;
+        color: #333;
+        background: #ffd8bd; 
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    
+    header {
+        background: #ffeb3b; 
+        padding: 1rem;
+    }
+
+nav {
+    background: #f7d800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+nav ul li {
+    font-size: 16px;
+    cursor: pointer;
+}
+    .hero {
+        background-image: url('https:.jpg');
         background-size: cover;
         background-position: center;
-        height: 260px;
-        position: relative;
+        padding: 4rem 1rem;
         text-align: center;
-        padding-top: 20px;
         color: black;
     }
-    .header h1 {
+
+    .hero h1 {
         font-size: 60px;
         margin: 0;
-        font-weight: 700;
     }
-    .header h2 {
-        font-size: 28px;
+
+    .hero h2 {
+        font-size: 28px; 
         margin-top: -10px;
+        font-weight: normal;
     }
+
+   
     .search-bar {
-        width: 60%;
         max-width: 500px;
-        height: 45px;
-        margin: 20px auto 0;
+        margin: 25px auto 0;
         display: flex;
         background: white;
         border: 2px solid black;
         border-radius: 5px;
+        height: 45px;
     }
+
     .search-bar input {
         flex: 1;
-        padding: 10px;
+        padding: 10px 15px;
         border: none;
+        font-size: 18px;
         outline: none;
+        placeholder: "Search recipes...";
     }
+
     .search-bar button {
         width: 45px;
-        font-size: 18px;
         border: none;
         background: white;
+        font-size: 18px;
         cursor: pointer;
     }
+
+   
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 25px 1rem 50px;
+    }
+
     .section-title {
-        background: #ff8b3d;
-        padding: 15px 20px;
-        font-size: 24px;
+        background: #ff7f2a; 
+        padding: 15px 30px;
+        font-size: 28px;
         font-weight: bold;
+        color: black;
+        margin: 0 0 30px;
+        text-align: left;
     }
-    .content {
-        padding: 20px;
-    }
-    .recipe-card {
-        background: white;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        margin-bottom: 30px;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    .recipe-card img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 15px;
-    }
-    .recipe-text {
-        max-width: 400px;
-    }
-    .recipe-text h3 {
-        margin: 0 0 5px;
-        font-size: 22px;
-    }
-    .recipe-text p {
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.4;
-    }
+
+    
     .star {
         font-size: 120px;
-        color: #ffa24c;
-        text-align: center;
-        margin: 10px 0;
+        color: #ff8b3e;
+        opacity: 0.9;
+        width: 100%;
+        margin: 30px 0 10px;
     }
-    .footer {
-        background: #ffdb3b;
-        padding: 25px;
+
+    .star.left { text-align: left; padding-left: 20px; }
+    .star.right { text-align: right; padding-right: 20px; }
+
+   
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 2rem;
+        margin-bottom: 30px;
+
+    }
+
+    .recipe-card {
+        background: white;
+        border-radius: 25px; 
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .recipe-card img {
+        width: 150px;
+        height: 150px; 
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+    }
+
+    .recipe-text {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recipe-text h3 {
+        margin: 0 0 10px;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .recipe-text p {
+        font-size: 15px;
+        line-height: 1.4;
+        color: #555;
+        flex: 1;
+    }
+
+   
+    footer {
+        background: #ffeb3b; 
+        padding: 25px 1rem;
         text-align: center;
         font-size: 26px;
-        font-weight: 700;
-        margin-top: 30px;
+        font-weight: bold;
+        color: black;
     }
+
+   
     @media (max-width: 768px) {
-        .recipe-card {
+        .nav {
             flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero h1 { font-size: 50px; }
+        .hero h2 { font-size: 22px; }
+
+        .search-bar {
+            width: 90%;
+            height: 40px;
+        }
+
+        .search-bar input { font-size: 16px; }
+
+        .star { font-size: 80px; }
+
+        .section-title {
+            font-size: 24px;
+            padding: 15px 20px;
             text-align: center;
         }
-        .recipe-text {
-            max-width: 100%;
-        }
-        .search-bar {
-            width: 85%;
-        }
-        .header h1 {
-            font-size: 45px;
-        }
-        .header h2 {
-            font-size: 22px;
-        }
+
+        footer { font-size: 22px; }
     }
 </style>
 </head>
 <body>
-<div class="header">
+
+
+<header>
+<nav>
+    <div class="logo">KF</div>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Feedback</li>
+    </ul>
+</nav>
+
+</header>
+
+
+<section class="hero">
     <h1>Kusina</h1>
     <h2>Filipina</h2>
     <div class="search-bar">
-        <input type="text" placeholder="Search recipes..." />
+        <input type="text" placeholder="Search recipes...">
         <button>🔍</button>
     </div>
+</section>
+
+
+<div class="wrapper">
+    <div class="section-title">Classic Pinoy Favourites</div>
+
+  
+    <div class="star right">★</div>
+    <div class="cards-container">
+      
+        <div class="recipe-card">
+            <img src="https://i.ibb.co/6twbbG8/sinigang.jpg" alt="Sinigang"> 
+            <div class="recipe-text">
+                <h3>Sinigang</h3>
+                <p>A flavorful and tangy Filipino soup known for its sour broth, typically made with tamarind, tomatoes, and other souring agents.</p>
+            </div>
+        </div>
+
+        
+            <div class="star left">★</div>
+        <div class="recipe-card">
+            <img src="https://i.ibb.co/Nx5X6Bs/menudo.jpg" alt="Menudo"> 
+            <div class="recipe-text">
+                <h3>Menudo</h3>
+                <p>A rich Filipino stew with pork, liver, potatoes, carrots, bell peppers, raisins, and hotdogs in a tomato-based sauce.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="star right">★</div>
+    <div class="cards-container">
+       
+        <div class="recipe-card">
+            <img src="https://i.ibb.co/4jmcML7/adobo.jpg" alt="Adobo">
+            <div class="recipe-text">
+                <h3>Adobo</h3>
+                <p>Considered the national dish of the Philippines, it's a savory dish braised in vinegar and soy sauce — tangy, salty, and flavorful.</p>
+            </div>
+        </div>
+
+        
+        <div class="star left">★</div>
+        <div class="recipe-card">
+            <img src="https://i.ibb.co/4TPC1f3/sisig.jpg" alt="Sisig">
+            <div class="recipe-text">
+                <h3>Sisig</h3>
+                <p>A popular sizzling Filipino dish made from chopped pork, delivering a perfect blend of savory, spicy, and tangy flavors.</p>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="section-title">Classic Pinoy Favourites</div>
-<div class="content">
-    <div class="recipe-card">
-        <img src="https://i.ibb.co/6twbbG8/sinigang.jpg" alt="Sinigang" />
-        <div class="recipe-text">
-            <h3>Sinigang</h3>
-            <p>A flavorful and tangy Filipino soup known for its sour broth, typically made with tamarind, tomatoes, and other souring agents.</p>
-        </div>
-    </div>
-    <div class="star">★</div>
-    <div class="recipe-card">
-        <div class="recipe-text">
-            <h3>Menudo</h3>
-            <p>A rich and savory Filipino stew made with diced pork, liver, potatoes, carrots, and bell peppers in a tomato-based sauce. It often includes raisins and hotdogs for added flavor and sweetness.</p>
-        </div>
-        <img src="https://i.ibb.co/Nx5X6Bs/menudo.jpg" alt="Menudo" />
-    </div>
-    <div class="star">★</div>
-    <div class="recipe-card">
-        <img src="https://i.ibb.co/4jmcML7/adobo.jpg" alt="Adobo" />
-        <div class="recipe-text">
-            <h3>Adobo</h3>
-            <p>Considered the national dish of the Philippines, Adobo is a savory dish made by braising meat in a sauce of vinegar and soy sauce. It is flavorful, tangy, and slightly salty.</p>
-        </div>
-    </div>
-    <div class="star">★</div>
-    <div class="recipe-card">
-        <div class="recipe-text">
-            <h3>Sisig</h3>
-            <p>A popular Filipino dish made from chopped pork. It's often served sizzling on a hot plate, delivering a savory, spicy, and tangy flavor.</p>
-        </div>
-        <img src="https://i.ibb.co/4TPC1f3/sisig.jpg" alt="Sisig" />
-    </div>
-</div>
-<div class="footer">
+
+
+<footer>
     Mga Panlasang Pinoy Recipes
-</div>
+</footer>
+
 </body>
 </html>
+
