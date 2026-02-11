@@ -13,26 +13,31 @@
 }
 body{
     background:#F9DC82;  
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    background: #FFA500;
+nav {
+    width: 95%;
+    height: 25px;
+    background: #f7d800;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-.logo{
-    font-weight:bold;
-    font-size:22px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:40px;
+nav a {
+    text-decoration: underline;
+    color: blue;
 }
-nav ul li a{
-    text-decoration:none;
-    color:black;
-}
+nav .logo {
+     font-size: 22px; 
+   font-weight: bold;
+   }
 .hero{
     height:200px;
     background:url("https://images.unsplash.com/photo-1551218808-94e220e084d2") center/cover no-repeat;
