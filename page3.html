@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kusina Filipina - Bulalo</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:#F9DC82;  
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:#FFA500; 
+}
+.logo{
+    font-weight:bold;
+    font-size:22px;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:black;
+}
+.hero{
+    height:200px;
+    background:url("https://images.unsplash.com/photo-1551218808-94e220e084d2") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.hero-text{
+    text-align:center;
+}
+.hero-text h1{
+    font-size:70px;
+}
+.hero-text p{
+    font-size:28px;
+}
+.title{
+    padding:30px 60px 10px 60px;
+}
+
+.title h2{
+    font-size:65px;
+}
+.top-section{
+    display:flex;
+    gap:30px;
+    padding:20px 60px 60px 60px;
+}
+.left-image{
+    flex:1;
+}
+.left-image img{
+    width:100%;
+    border-radius:50%;
+}
+.middle-content{
+    flex:1.2;
+    background:#F6C667;
+    padding:25px;
+    border-radius:30px;
+}
+.right-info{
+    flex:0.9;
+    background:#FAD7A0;
+    padding:25px;
+    border-radius:20px;
+}
+.recipe-title{
+    padding:0 60px;
+}
+.recipe-title h3{
+    font-size:40px;
+}
+.recipe-container{
+    display:flex;
+    gap:30px;
+    padding:30px 60px 100px 60px;
+}
+.ingredients{
+    flex:1;
+    background:#F4B942;
+    padding:30px;
+    border-radius:70px 20px 70px 20px;
+}
+.instructions{
+    flex:1;
+    background:#E67E22;
+    padding:30px;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 85%,
+        85% 100%,
+        0 100%
+    );
+}
+.ingredients h4,
+.instructions h4{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+.ingredients ul,
+.instructions ol{
+    padding-left:20px;
+    line-height:1.6;
+}
+@media(max-width:900px){
+    .top-section,
+    .recipe-container{
+        flex-direction:column;
+    }
+
+    .instructions{
+        clip-path:none;
+        border-radius:20px;
+    }
+}
+</style>
+</head>
+<body
+<nav>
+    <div class="logo">KF</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+    </ul>
+</nav>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Kusina</h1>
+        <p>Filipina</p>
+    </div>
+</section>
+<hr>
+<div class="title">
+    <h2>Bulalo</h2>
+</div>
+<section class="top-section">
+    <div class="left-image">
+        <img src="https://panlasangpinoy.com/wp-content/uploads/2019/10/bulalo.jpg">
+    </div>
+    <div class="middle-content">
+        <p>
+        Bulalo is a classic Filipino soup dish renowned for its rich,
+        clear broth and tender beef shanks with bone marrow.
+        </p>
+    </div>
+    <div class="right-info">
+        <h4>Nutritional Information</h4>
+        <p>
+        Exact nutritional values vary depending on ingredients and portions.
+        </p>
+    </div>
+</section>
+<div class="recipe-title">
+    <h3>Bulalo Recipe</h3>
+    <p>This recipe yields a tender beef shank and rich broth.</p>
+</div>
+<section class="recipe-container">
+    <div class="ingredients">
+        <h4>Ingredients</h4>
+        <ul>
+            <li>3 lbs beef shank</li>
+            <li>8 cups water</li>
+            <li>Garlic</li>
+            <li>Onion</li>
+            <li>Potatoes</li>
+            <li>Corn</li>
+            <li>Cabbage</li>
+        </ul>
+    </div>
+    <div class="instructions">
+        <h4>Instructions</h4>
+        <ol>
+            <li>Blanch beef.</li>
+            <li>Sauté aromatics.</li>
+            <li>Simmer for 2 hours.</li>
+            <li>Add vegetables.</li>
+            <li>Season and serve.</li>
+        </ol>
+    </div>
+</section>
+</body>
+</html>
