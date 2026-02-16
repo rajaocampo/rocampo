@@ -1,221 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kusina Filipina - Bulalo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulalo - Kusina Filipina</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#F9DC82;  
-}
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    background:#FFA500;
-}
-.logo{
-    font-weight:bold;
-    font-size:22px;
-}
-nav a {
-    text-decoration: underline;
-    color: blue;
-}
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:40px;
-}
-nav ul li a{
-    text-decoration:none;
-    color:black;
-}
-.hero{
-    height:250px;
-    background:url("fe2ad855-53b6-4efb-9ee1-48d2d43a5660.jpg") center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.hero-text{
-    text-align:center;
-}
-.hero-text h1{
-    font-size:70px;
-}
-.hero-text p{
-    font-size:28px;
-}
-.title{
-    padding:30px 60px 10px 60px;
-}
-.title h2{
-    font-size:65px;
-}
-.top-section{
-    display:flex;
-    gap:30px;
-    padding:20px 60px 60px 60px;
-}
-.left-image{
-    flex:1;
-}
-.left-image img{
-    width:100%;
-    border-radius:50%;
-}
-.middle-content{
-    flex:1.2;
-    background:#F6C667;
-    padding:25px;
-    border-radius:30px;
-}
-.right-info{
-    flex:0.9;
-    background:#FAD7A0;
-    padding:25px;
-    border-radius:20px;
-}
-.recipe-title{
-    padding:0 60px;
+body {
+    background: #fff6d6;
 }
 
-.recipe-title h3{
-    font-size:40px;
+.navbar {
+    background: #e5c54f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
 }
-.recipe-container{
-    display:flex;
-    gap:30px;
-    padding:30px 60px 100px 60px;
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 22px;
 }
-.ingredients{
-    flex:1;
-    background:#F4B942;
-    padding:30px;
-    border-radius:70px 20px 70px 20px;
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
-.instructions{
-    flex:1;
-    background:#E67E22;
-    padding:30px;
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.header {
+    background: url("https://images.unsplash.com/photo-1604908177522-0406b3f91d87?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    font-size: 60px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 30px;
+}
+
+.title {
+    background: #f2c35e;
+    padding: 20px 60px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.top-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+    background: #ffe8a3;
+}
+
+.description {
+    flex: 2;
+    background: #f9d87b;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.description img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nutrition {
+    flex: 1;
+    background: #f4b76e;
+    padding: 30px;
+    color: black;
     clip-path: polygon(
         0 0,
         100% 0,
         100% 85%,
-        85% 100%,
-        0 100%
+        50% 100%,
+        0 85%
     );
 }
-.ingredients h4,
-.instructions h4{
-    text-align:center;
-    font-size:28px;
-    margin-bottom:20px;
-}
-.ingredients ul,
-.instructions ol{
-    padding-left:20px;
-    line-height:1.6;
+
+.recipe-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+    background: #ffd680;
 }
 
-@media(max-width:900px){
+.ingredients {
+    flex: 1;
+    background: #f2d47c;
+    padding: 40px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+}
+
+.instructions {
+    flex: 1;
+    background: #f28534;
+    padding: 40px;
+    color: white;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 85%,
+        50% 100%,
+        0 85%
+    );
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
     .top-section,
-    .recipe-container{
-        flex-direction:column;
+    .recipe-section {
+        flex-direction: column;
     }
 
-    .instructions{
-        clip-path:none;
-        border-radius:20px;
+    .nutrition,
+    .instructions {
+        clip-path: none;
+    }
+
+    .ingredients {
+        border-radius: 20px;
+    }
+
+    .description {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .description img {
+        width: 100%;
     }
 }
-
 </style>
 </head>
 <body>
-
-<nav>
-    <div class="logo">KF</div>
-    <ul>
-        <li><a href="pageone.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-    </ul>
+<nav class="navbar">
+<div class="logo">KF</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#recipe">Recipe</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-<section class="hero">
-    <div class="hero-text">
-        <h1>Kusina</h1>
-        <p>Filipina</p>
-    </div>
-</section>
 
-<div class="title">
-    <h2>Bulalo</h2>
+<div class="header" id="home">
+<h1>Kusina Filipina</h1>
 </div>
 
-<section class="top-section">
+<div class="title">Bulalo</div>
 
-    <div class="left-image">
-        <img src="https://panlasangpinoy.com/wp-content/uploads/2019/10/bulalo.jpg">
-    </div>
-
-    <div class="middle-content">
-        <p>
-        Bulalo is a classic Filipino soup dish renowned for its rich,
-        clear broth and tender beef shanks with bone marrow.
-        </p>
-    </div>
-
-    <div class="right-info">
-        <h4>Nutritional Information</h4>
-        <p>
-        Exact nutritional values vary depending on ingredients and portions.
-        </p>
-    </div>
-
-</section>
-
-<div class="recipe-title">
-    <h3>Bulalo Recipe</h3>
-    <p>This recipe yields a tender beef shank and rich broth.</p>
+<section class="top-section" id="about">
+<div class="description">
+<img src="https://images.unsplash.com/photo-1598514983901-cd9b9240f856?auto=format&fit=crop&w=200&q=80" alt="Bulalo">
+<p><strong>Bulalo</strong> is a classic Filipino soup known for its rich,
+clear broth and tender beef shanks with bone marrow.
+It is simmered for hours until the meat becomes tender
+and flavorful. Best served hot.</p>
 </div>
 
-<section class="recipe-container">
-
-    <div class="ingredients">
-        <h4>Ingredients</h4>
-        <ul>
-            <li>3 lbs beef shank</li>
-            <li>8 cups water</li>
-            <li>Garlic</li>
-            <li>Onion</li>
-            <li>Potatoes</li>
-            <li>Corn</li>
-            <li>Cabbage</li>
-        </ul>
-    </div>
-
-    <div class="instructions">
-        <h4>Instructions</h4>
-        <ol>
-            <li>Blanch beef.</li>
-            <li>Sauté aromatics.</li>
-            <li>Simmer for 2 hours.</li>
-            <li>Add vegetables.</li>
-            <li>Season and serve.</li>
-        </ol>
-    </div>
-
+<div class="nutrition">
+<h3>Nutritional Information</h3>
+<p>Provides protein and minerals from beef and vegetables.
+Nutritional value depends on preparation and portion size.</p>
+</div>
 </section>
 
+<section class="recipe-section" id="recipe">
+<div class="ingredients">
+<h3>Ingredients</h3>
+<ul>
+<li>3 lbs beef shank</li>
+<li>8 cups water</li>
+<li>Ginger, onion, garlic</li>
+<li>Salt & pepper</li>
+<li>Potatoes</li>
+<li>Corn</li>
+<li>Green beans</li>
+<li>Cabbage</li>
+<li>Bok choy</li>
+</ul>
+</div>
+
+<div class="instructions">
+<h3>Instructions</h3>
+<ol>
+<li>Blanch beef and rinse.</li>
+<li>Sear meat.</li>
+<li>Sauté aromatics.</li>
+<li>Simmer 2–2.5 hours.</li>
+<li>Add vegetables gradually.</li>
+<li>Serve hot.</li>
+</ol>
+</div>
+</section>
 </body>
 </html>
