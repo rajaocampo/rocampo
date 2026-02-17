@@ -193,9 +193,10 @@ nav .logo {
 <section class="hero">
     <h1>Kusina</h1>
     <h2>Filipina</h2>
-    <div class="search-bar">
-        <input type="text" placeholder="Search recipes...">
-        <button>🔍</button>
+    <form class="search-bar" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search recipes..." required>
+        <button type="submit">🔍</button>
+    </form>
     </div>
 </section>
 <div class="wrapper">
@@ -244,5 +245,26 @@ nav .logo {
 <footer>
     Mga Panlasang Pinoy Recipes
 </footer>
+        <script>
+document.getElementById("searchForm").onsubmit = function (e) {
+    e.preventDefault();
+    const query = document.getElementById("searchInput").value
+        .toLowerCase()
+        .trim();
+    if (query === "bulalo") {
+        window.location.href = "bulalo.html";
+    } else if (query === "adobo") {
+        window.location.href = "adobo.html";
+    } else if (query === "sinigang") {
+        window.location.href = "sinigang.html";
+    } else if (query === "menudo") {
+        window.location.href = "menudo.html";
+    } else if (query === "sisig") {
+        window.location.href = "sisig.html";
+    } else {
+        alert("recipes ");
+    }
+};
+</script>
 </body>
 </html>
