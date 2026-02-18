@@ -244,27 +244,25 @@ nav .logo {
     Mga Panlasang Pinoy Recipes
 </footer>
         <script>
-document.getElementById("searchForm").onsubmit = function (e) {
+document.getElementById("searchForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    const query = document.getElementById("searchInput").value
-        .toLowerCase()
-        .trim();
-    if (query === "bulalo") {
-window.location.href = "/rocampo/bulalo.html";
-    } else if (query === "adobo") {
-      window.location.href = 
-    } else if (query === "sinigang") {
-        window.location.href = "sinigang.html";
-    } else if (query === "menudo") {
-        window.location.href = "menudo.html";
-    } else if (query === "sisig") {
-        window.location.href = "sisig.html";
-    }
-        else {
-        document.getElementById("searchMessage").textContent =
-             "bulalo";
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    const recipes = {
+        "bulalo": "bulalo.html",
+        "adobo": "adobo.html",
+        "sinigang": "sinigang.html",
+        "menudo": "menudo.html",
+        "sisig": "sisig.html"
+    };
+
+    if (recipes[query]) {
+        window.location.href = recipes[query];
+    } else {
+        document.getElementById("searchMessage").textContent = "Recipe not found!";
     }
 });
+
 </script>
 </body>
 </html>
