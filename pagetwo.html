@@ -260,8 +260,11 @@ document.getElementById("searchForm").onsubmit = function (e) {
     } else if (query === "sisig") {
         window.location.href = "sisig.html";
     }
-        <p id="searchMessage" style="text-align:center;color:red;margin-top:10px;"></p>
-};
+        else {
+        document.getElementById("searchMessage").textContent =
+            "Recipe not found 😢";
+    }
+});
 </script>
 </body>
 </html>
