@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sisig - Kusina Filipina</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: #fff6d6;
+}
+.navbar {
+    background: #f7d800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+.navbar .logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.navbar a {
+    text-decoration: underline;
+    color: blue;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 30px;
+    font-size: 60px;
+}
+.title {
+    padding: 20px 60px;
+    font-size: 48px;
+    font-weight: bold;
+}
+.top-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+}
+.description {
+    flex: 2;
+    background: #F98332;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.description img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+.nutrition {
+    flex: 1;
+    background: #f4b76e;
+    padding: 30px;
+    color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 85%);
+}
+.recipe-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+    background: #ffd680;
+}
+.ingredients {
+    flex: 1;
+    background: #f2d47c;
+    padding: 40px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+}
+.instructions {
+    flex: 1;
+    background: #f28534;
+    padding: 40px;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+h3 {
+    margin-bottom: 20px;
+}
+ul,
+ol {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+@media(max-width:900px) {
+    .top-section,
+    .recipe-section {
+        flex-direction: column;
+    }
+    .nutrition,
+    .instructions {
+        clip-path: none;
+    }
+    .ingredients {
+        border-radius: 20px;
+    }
+    .description {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .description img {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">KF</div>
+<ul>
+<li><a href="pageone.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+</ul>
+</nav>
+<div class="header">
+<img src="sisig-header.jpg" alt="Kusina Filipina">
+<h1>Kusina Filipina</h1>
+</div>
+<hr>
+<div class="title">Sisig</div>
+<section class="top-section">
+<div class="description">
+<img src="sisig.jpg" alt="Sisig">
+<p><strong>Sisig</strong> is a sizzling Filipino dish made from finely chopped pork, usually from the head and liver, seasoned with calamansi, onions, and chili peppers. Crispy, tangy, and spicy, it is a favorite pulutan.</p>
+</div>
+<div class="nutrition">
+<h3>Nutritional Information</h3>
+<p>Rich in protein from pork, moderate fat content, and a good source of flavor through spices and condiments. Calories depend on oil and meat used.</p>
+</div>
+</section>
+<h3>Sisig Recipe</h3>
+<p>This recipe produces crispy, flavorful sisig perfect for serving hot.</p>
+<section class="recipe-section">
+<div class="ingredients">
+<h3>Ingredients</h3>
+<ul>
+<li>1 lb pork cheeks, finely chopped</li>
+<li>1/2 lb pork liver, optional</li>
+<li>1 medium onion, chopped</li>
+<li>2-3 green chili peppers, chopped</li>
+<li>2 tbsp soy sauce</li>
+<li>1-2 tbsp calamansi juice</li>
+<li>1 tsp ground black pepper</li>
+<li>2 tbsp cooking oil</li>
+<li>Optional: mayonnaise for topping</li>
+</ul>
+</div>
+<div class="instructions">
+<h3>Instructions</h3>
+<ol>
+<li>Boil pork cheeks and liver until tender. Drain and chop finely.</li>
+<li>Heat oil in a pan. Sauté onions and chili peppers.</li>
+<li>Add chopped pork and liver. Stir-fry until crispy.</li>
+<li>Add soy sauce, calamansi juice, and black pepper. Mix well.</li>
+<li>Serve hot on a sizzling plate. Optional: add mayonnaise on top.</li>
+</ol>
+</div>
+</section>
+</body>
+</html>
