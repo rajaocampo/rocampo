@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adobo - Kusina Filipina</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: #fff6d6;
+}
+.navbar {
+    background: #e5c54f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+.navbar .logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.navbar a {
+    text-decoration: underline;
+    color: blue;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 30px;
+    font-size: 60px;
+}
+.title {
+    padding: 20px;
+    font-size: 48px;
+    font-weight: bold;
+}
+.top-section {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: #ffe8a3;
+}
+.description {
+    flex: 2;
+    background: #f9d87b;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.description img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+.nutrition {
+    flex: 1;
+    background: #f4b76e;
+    padding: 20px;
+    color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+.recipe-section {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: #ffd680;
+}
+.ingredients {
+    flex: 1;
+    background: #f2d47c;
+    padding: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.instructions {
+    flex: 1;
+    background: #f28534;
+    padding: 20px;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+h3 {
+    margin-bottom: 15px;
+}
+ul, ol {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+@media (max-width: 900px) {
+    .top-section, .recipe-section {
+        flex-direction: column;
+    }
+    .nutrition, .instructions {
+        clip-path: none;
+    }
+    .ingredients {
+        border-radius: 20px;
+    }
+    .description {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .description img {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">KF</div>
+    <ul>
+        <li><a href="pageone.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+<div class="header">
+    <img src="adobo-header.jpg" alt="Adobo">
+    <h1>Kusina Filipina</h1>
+</div>
+<hr>
+<div class="title">Adobo</div>
+<section class="top-section">
+    <div class="description">
+        <img src="adobo-main.jpg" alt="Adobo">
+        <p><strong>Adobo</strong> is a popular Filipino dish braised in vinegar, soy sauce, garlic, and bay leaves. 
+           Tender, flavorful, and a staple in every Filipino household.</p>
+    </div>
+    <div class="nutrition">
+        <h3>Nutritional Information</h3>
+        <p>High in protein and rich in flavor. Nutritional value depends on portion and preparation method.</p>
+    </div>
+</section>
+<section class="recipe-section">
+    <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2 lbs chicken or pork</li>
+            <li>1/2 cup soy sauce</li>
+            <li>1/2 cup vinegar</li>
+            <li>5 cloves garlic, minced</li>
+            <li>2 bay leaves</li>
+            <li>1 tsp black peppercorns</li>
+            <li>1 cup water</li>
+            <li>Oil for frying</li>
+        </ul>
+    </div>
+    <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li>Marinate meat with soy sauce, vinegar, garlic, bay leaves, and pepper for 30 mins.</li>
+            <li>Pan-fry meat until lightly browned.</li>
+            <li>Simmer with marinade and water for 40-50 minutes.</li>
+            <li>Adjust seasoning to taste.</li>
+            <li>Serve hot with rice.</li>
+        </ol>
+    </div>
+</section>
+</body>
+</html>
