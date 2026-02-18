@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menudo - Kusina Filipina</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: #fff6d6;
+}
+.navbar {
+    background: #f7d800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+.navbar .logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.navbar a {
+    text-decoration: underline;
+    color: blue;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 30px;
+    font-size: 60px;
+}
+.title {
+    padding: 20px 60px;
+    font-size: 48px;
+    font-weight: bold;
+}
+.top-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+}
+.description {
+    flex: 2;
+    background: #F98332;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.description img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+.nutrition {
+    flex: 1;
+    background: #f4b76e;
+    padding: 30px;
+    color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 85%);
+}
+.recipe-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 60px;
+    background: #ffd680;
+}
+.ingredients {
+    flex: 1;
+    background: #f2d47c;
+    padding: 40px;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+}
+.instructions {
+    flex: 1;
+    background: #f28534;
+    padding: 40px;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+h3 {
+    margin-bottom: 20px;
+}
+ul,
+ol {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+@media(max-width:900px) {
+    .top-section,
+    .recipe-section {
+        flex-direction: column;
+    }
+    .nutrition,
+    .instructions {
+        clip-path: none;
+    }
+    .ingredients {
+        border-radius: 20px;
+    }
+    .description {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .description img {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">KF</div>
+<ul>
+<li><a href="pageone.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+</ul>
+</nav>
+<div class="header">
+<img src="menudo-header.jpg" alt="Kusina Filipina">
+<h1>Kusina Filipina</h1>
+</div>
+<hr>
+<div class="title">Menudo</div>
+<section class="top-section">
+<div class="description">
+<img src="menudo.jpg" alt="Menudo">
+<p><strong>Menudo</strong> is a classic Filipino pork stew with liver, potatoes, carrots, bell peppers, and raisins in a savory tomato sauce. It's hearty, flavorful, and commonly served during family gatherings or special occasions.</p>
+</div>
+<div class="nutrition">
+<h3>Nutritional Information</h3>
+<p>Good source of protein from pork and liver. Contains vitamins and fiber from vegetables. Sodium and fat depend on seasonings and cuts of meat used.</p>
+</div>
+</section>
+<h3>Menudo Recipe</h3>
+<p>This recipe yields a rich, savory, and colorful Filipino stew perfect with steamed rice.</p>
+<section class="recipe-section">
+<div class="ingredients">
+<h3>Ingredients</h3>
+<ul>
+<li>1 lb pork, diced</li>
+<li>½ lb pork liver, diced</li>
+<li>2 medium potatoes, diced</li>
+<li>2 medium carrots, diced</li>
+<li>1 bell pepper, diced</li>
+<li>1 small onion, chopped</li>
+<li>3 cloves garlic, minced</li>
+<li>1 cup tomato sauce</li>
+<li>1 tbsp soy sauce</li>
+<li>½ cup raisins</li>
+<li>Salt and pepper, to taste</li>
+<li>Oil, for sautéing</li>
+</ul>
+</div>
+<div class="instructions">
+<h3>Instructions</h3>
+<ol>
+<li>Sauté garlic and onion in oil until fragrant.</li>
+<li>Add diced pork; cook until lightly browned.</li>
+<li>Add liver and cook 2–3 minutes.</li>
+<li>Pour in tomato sauce and soy sauce; simmer for 10 minutes.</li>
+<li>Add potatoes and carrots; cook until tender.</li>
+<li>Add bell peppers and raisins; simmer another 5 minutes.</li>
+<li>Season with salt and pepper to taste. Serve hot with rice.</li>
+</ol>
+</div>
+</section>
+</body>
+</html>
