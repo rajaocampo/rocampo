@@ -84,11 +84,6 @@ body {
         0 85%
     );
 }
-.recipe-section {
-    display: flex;
-    gap: 30px;
-    padding: 40px 60px;
-}
 .recipe-intro {
     padding: 0 60px 10px;
     margin-top: 0;
@@ -99,6 +94,11 @@ body {
 }
 .recipe-intro p {
     font-size: 16px;
+}
+.recipe-section {
+    display: flex;
+    gap: 30px;
+    padding: 0 60px 40px; 
 }
 .ingredients {
     flex: 1;
