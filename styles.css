@@ -89,6 +89,17 @@ body {
     gap: 30px;
     padding: 40px 60px;
 }
+.recipe-intro {
+    padding: 0 60px 10px;
+    margin-top: 0;
+}
+.recipe-intro h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.recipe-intro p {
+    font-size: 16px;
+}
 .ingredients {
     flex: 1;
     background: #f2d47c;
