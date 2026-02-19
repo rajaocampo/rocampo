@@ -56,7 +56,6 @@ body {
     display: flex;
     gap: 30px;
     padding: 40px 60px;
-    background: #ffe8a3;
 }
 .description {
     flex: 2;
@@ -89,7 +88,6 @@ body {
     display: flex;
     gap: 30px;
     padding: 40px 60px;
-    background: #ffd680;
 }
 .ingredients {
     flex: 1;
