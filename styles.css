@@ -113,7 +113,7 @@ body {
     flex: 1;
     background: #f28534;
     color: white;
-    min-height: 950px;          
+    min-height: 650px;          
     padding: 60px 40px 140px;   
     clip-path: polygon(
         0 0,
