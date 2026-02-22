@@ -12,10 +12,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background: #fff6d6;
+    background: #FFFFE0;
 }
 .navbar {
-    background: #f7d800;
+    background:  #f7d800;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,8 +41,8 @@ body {
     align-items: center;
 }
 .header img {
-    width: 100%;
-    height: 240px;
+    width: 200%;
+    height: 300px;
     object-fit: cover;
 }
 .header h1 {
@@ -50,8 +50,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0,0,0,0.5);
+    color: black;
     padding: 10px 30px;
     font-size: 60px;
 }
@@ -84,13 +83,30 @@ body {
     background: #f4b76e;
     padding: 30px;
     color: black;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 85%);
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 90%,
+        50% 100%,
+        0 85%
+    );
+}
+.recipe-intro {
+    padding: 0 60px 10px;
+    margin-top: 0;
+}
+.recipe-intro h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.recipe-intro p {
+    font-size: 16px;
 }
 .recipe-section {
     display: flex;
     gap: 30px;
-    padding: 40px 60px;
-    background: #ffd680;
+    padding: 0 60px 40px;
+    align-items: stretch; 
 }
 .ingredients {
     flex: 1;
@@ -102,10 +118,21 @@ body {
 .instructions {
     flex: 1;
     background: #f28534;
-    padding: 40px;
     color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    min-height: 650px;          
+    padding: 60px 40px 140px;   
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 88%,
+        50% 100%,
+        0 88%
+    );
 }
+h3 {
+    margin-bottom: 20px;
+}
+
 h3 {
     margin-bottom: 20px;
 }
@@ -114,7 +141,7 @@ ol {
     margin-left: 20px;
     line-height: 1.8;
 }
-@media(max-width:900px) {
+@media (max-width: 900px) {
     .top-section,
     .recipe-section {
         flex-direction: column;
@@ -123,8 +150,10 @@ ol {
     .instructions {
         clip-path: none;
     }
-    .ingredients {
-        border-radius: 20px;
+    .instructions {
+        clip-path: none;
+        min-height: auto;
+        padding-bottom: 40px;
     }
     .description {
         flex-direction: column;
