@@ -99,9 +99,8 @@ body {
     display: flex;
     gap: 30px;
     padding: 0 60px 40px;
-    align-items: stretch; /* 👈 makes both columns equal height */
+    align-items: stretch; 
 }
-
 .ingredients {
     flex: 1;
     background: #f2d47c;
