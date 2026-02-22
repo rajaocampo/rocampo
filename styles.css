@@ -38,6 +38,11 @@ body {
     height: 300px;
     object-fit: cover;
 }
+.thick-line {
+  height: 6px;        
+  background-color: #000;
+  border: none;
+}
 .title {
     padding: 20px 60px;
     font-size: 48px;
